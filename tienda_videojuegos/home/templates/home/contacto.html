@@ -1,19 +1,17 @@
-<!-- incontactodex.html-->
- <!DOCTYPE html>
- <html lang="es">
- <head>
-     <meta charset="UTF-8">
-     <title>Contacto - Tienda de videojuegos</title>
- </head>
- <body>
-     <h1>Contacto</h1>
-     <p>Si tienes alguna pregunta o necesitas ayuda, no dudes en contactarnos.</p>
-     <p>Envía un correo electrónico a contacto@tienda_videojuegos.es.</p>
-     <p>¡Estamos aquí para ayudarte!</p>
+{% extends 'base.html' %}
+{% load static %}
 
-     <footer>
-        <p>&copy; 2026 Tienda de Videojuegos. Todos los derechos reservados.</p>
-        <a href="{% url 'home' %}">Inicio</a>
-     </footer>
- </body>
- </html>    
+<!-- index.html-->
+ {% block title %}
+ Contacto - Tienda de videojuegos
+ {% endblock %}
+ 
+ {% block content %}
+ <div class="container mt-5">
+    <h1 class="text-light">Contacto</h1>
+     <p class="text-light">Envía un correo electrónico a <a href="mailto:contacto@tienda_videojuegos.es" class="text-light">contacto@tienda_videojuegos.es</a>.</p>
+     <div class="alert alert-primary">Nuestro equipo de soporte estará encantado de ayudarte.</div>
+     <div class="alert alert-warning">Recuerda incluir detalles sobre tu consulta para una respuesta más rápida.</div>
+     <div class="alert alert-danger">No compartas información personal sensible en el correo electrónico
+</div>
+{% endblock %}
