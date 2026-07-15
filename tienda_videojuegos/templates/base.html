@@ -90,13 +90,15 @@
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <div class="avatar-sm rounded-circle overflow-hidden me-2"
                                     style="width:32px; height:32px; background-color: {% if user.is_authenticated %}#FFFFFF{% else %}#eee400{% endif %};">
-                                    {% if user.is_authenticated and user.profile.avatar %}
-                                        <img src="{% static 'img/avatares/'|add:user.profile.avatar|add:'.webp' %}" 
-                                            alt="Avatar" class="rounded-circle"
+                                    {% if user.is_authenticated %}
+                                        <img src="{% static 'img/avatares/default.webp' %}"
+                                            alt="Usuario"
+                                            class="rounded-circle"
                                             style="width:100%; height:100%; object-fit:cover;">
                                     {% else %}
-                                        <img src="{% static 'img/avatares/default.webp' %}" 
-                                            alt="Invitado" class="rounded-circle"
+                                            <img src="{% static 'img/avatares/default.webp' %}"
+                                            alt="Invitado"
+                                            class="rounded-circle"
                                             style="width:100%; height:100%; object-fit:cover;">
                                     {% endif %}
                                 </div>
