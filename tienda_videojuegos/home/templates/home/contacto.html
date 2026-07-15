@@ -1,19 +1,17 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
+<!-- contacto.html -->
 
-<!-- index.html-->
- {% block title %}
- Contacto - Tienda de videojuegos
- {% endblock %}
- 
- {% block content %}
- <div class="container mt-5 text-center">
+{% block title %}Contacto - Tienda de Videojuegos{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
     <h1 class="text-body">Contacto</h1>
-      <p class="text-body">Envía un correo electrónico a <a href="mailto:contacto@tienda_videojuegos.es" 
-         class="text-body">contacto@tienda_videojuegos.es</a>
-      </p>
-     <div class="alert alert-primary">Nuestro equipo de soporte estará encantado de ayudarte.</div>
-     <div class="alert alert-warning">Recuerda incluir detalles sobre tu consulta para una respuesta más rápida.</div>
-     <div class="alert alert-danger">No compartas información personal sensible en el correo electrónico
+    <p class="text-body">Envía un correo a <a href="mailto:contacto@tiendavideojuegos.com"
+            class="text-body">contacto@tiendavideojuegos.com</a></p>
+
+    <div class="alert alert-primary">Estamos disponibles de lunes a viernes de 9:00 a 18:00.</div>
+    <div class="alert alert-warning">El tiempo de respuesta puede variar según la demanda.</div>
+    <div class="alert alert-danger">No envíes información sensible por este formulario.</div>
 </div>
 {% endblock %}
