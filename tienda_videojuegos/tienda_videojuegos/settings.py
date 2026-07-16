@@ -22,9 +22,9 @@ load_dotenv(ENV_FILE)
 # ---------------------------------------------------
 # Seguridad y depuración
 # ---------------------------------------------------
-SECRET_KEY = 'django-insegura-solo-para-desarrollo' #SECRET_KEY = os.getenv('SECRET_KEY')
-DEBUG = True #os.getenv('DEBUG') == 'True'
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', 'localhost,127.0.0.1').split(',')
+SECRET_KEY = os.getenv('SECRET_KEY')
+DEBUG = os.getenv('DEBUG') == 'True'
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 # ---------------------------------------------------
 # Aplicaciones instaladas
@@ -82,20 +82,14 @@ WSGI_APPLICATION = 'tienda_videojuegos.wsgi.application'
 # ---------------------------------------------------
 # Base de datos
 # ---------------------------------------------------
-#DATABASES = {
-#    'default': {
-#        'ENGINE': os.getenv('DATABASE_ENGINE'),
-#        'NAME': os.getenv('DATABASE_NAME'),
-#        'USER': os.getenv('DATABASE_USER', ''),
-#        'PASSWORD': os.getenv('DATABASE_PASSWORD', ''),
-#        'HOST': os.getenv('DATABASE_HOST', ''),
-#        'PORT': os.getenv('DATABASE_PORT', ''),
-#    }
-#}
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': os.getenv('DATABASE_ENGINE'),
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER', ''),
+        'PASSWORD': os.getenv('DATABASE_PASSWORD', ''),
+        'HOST': os.getenv('DATABASE_HOST', ''),
+        'PORT': os.getenv('DATABASE_PORT', ''),
     }
 }
 
