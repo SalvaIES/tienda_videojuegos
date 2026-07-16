@@ -126,6 +126,12 @@ footer h6 {
     box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.25);
 }
 
+/* Portadas del catálogo */
+.card-img-top {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
 /* =========================================================
    TABLAS Y ELEMENTOS GENERALES
 ========================================================= */
